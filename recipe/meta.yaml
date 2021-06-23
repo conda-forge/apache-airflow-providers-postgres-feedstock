@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-postgres" %}
-{% set version = "1.0.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-postgres-{{ version }}.tar.gz
-  sha256: a5c01e7a463bfe05d8d757313a5df986830bd316d2741a5f9687a4b650ae1b4d
+  sha256: 4c464da56e25cd63653b790e1fa5a1f5d3014d9c408ed8df8d6002d8e69f5515
   patches:
     # the requirement is psycopg2-binary but should properly be psycopg2
     - 0001-rename-psycopg2-binary.patch

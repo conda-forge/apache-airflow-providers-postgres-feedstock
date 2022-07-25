@@ -22,6 +22,7 @@ requirements:
   run:
     - python >=3.7
     - apache-airflow >=2.2.0
+    - apache-airflow-providers-common-sql
     - psycopg2-binary >=2.7.4
 
 test:

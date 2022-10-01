@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-postgres" %}
-{% set version = "5.2.1" %}
+{% set version = "5.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-postgres-{{ version }}.tar.gz
-  sha256: 56476f4c572345a0f8e88b69bbe7aeecb30f16d9a6bb26110089eaca7e6dccd9
+  sha256: 5fcee8a4c699935c3ef0c46f925ab333a4038b86e0eb1a462d636060db7401c5
 
 build:
   noarch: python

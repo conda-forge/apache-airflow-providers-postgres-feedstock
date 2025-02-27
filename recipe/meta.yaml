@@ -21,10 +21,10 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.9.0
-    - asyncpg >=0.30.0
+    - apache-airflow-providers-common-sql >=1.20.0
     - psycopg2-binary >=2.9.9
+    - asyncpg >=0.30.0
 
 test:
   imports:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-postgres for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/postgres/LICENSE
+  license_file: src/airflow/providers/postgres/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-postgres/stable/index.html
   dev_url: https://github.com/apache/airflow/

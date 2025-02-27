@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-postgres" %}
-{% set version = "6.0.0" %}
+{% set version = "6.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_postgres-{{ version }}.tar.gz
-  sha256: dfd93d18635e0e2a1124949fc17ff3875d40249fc6182060c80b192c7e78214a
+  sha256: 2433b41ef891cbe3ad952dda86c3b1e3b1ac91a4794e5ac41581a22ac0c7cc4e
 
 build:
   noarch: python
@@ -21,10 +21,10 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.9.0
+    - apache-airflow-providers-common-sql >=1.20.0
+    - psycopg2-binary >=2.9.9
     - asyncpg >=0.30.0
-    - psycopg2-binary >=2.9.4
 
 test:
   imports:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-postgres for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/postgres/LICENSE
+  license_file: src/airflow/providers/postgres/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-postgres/stable/index.html
   dev_url: https://github.com/apache/airflow/

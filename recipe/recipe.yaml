@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-postgres
-  version: "6.5.3"
+  version: 6.5.3
 
 package:
   name: ${{ name|lower }}
@@ -28,7 +28,6 @@ requirements:
     # more restrictive for python >=3.13
     - psycopg2-binary >=2.9.10
     - asyncpg >=0.30.0
-
 tests:
   - python:
       imports:

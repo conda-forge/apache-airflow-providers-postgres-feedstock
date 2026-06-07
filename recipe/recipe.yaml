@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-postgres
-  version: "6.6.3"
+  version: "6.7.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_postgres-${{ version }}.tar.gz
-  sha256: f9013dfd5d57723d3245779ad8d9d1b586bcf928024611ff9c22db3861121bcf
+  sha256: b80092f22a010a4a93aa5dedf4a4090f6cae6c438c1180c08b090dbb1fcb0307
 
 build:
   noarch: python

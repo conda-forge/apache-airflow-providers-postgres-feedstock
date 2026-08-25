@@ -29,6 +29,7 @@ requirements:
     # psycopg[binary] needs nothing extra on conda-forge
     - psycopg >=3.3.3
     # tightest of upstream's floors (python >=3.13)
+    - psycopg2-binary >=2.9.10
     - asyncpg >=0.30.0
 tests:
   - python:

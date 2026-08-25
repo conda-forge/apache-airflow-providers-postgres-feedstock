@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-postgres
-  version: "7.0.1"
+  version: 7.0.2
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_postgres-${{ version }}.tar.gz
-  sha256: 41176eb06fdc39aa8d3623aa95e12e49349ed243eca39043e5944c35bc7659ae
+  sha256: 883c5893cb5f5b6fb4eca59dca5f57027d0dfdbee25bc1a98da39b9b0eb693a7
 
 build:
   noarch: python
@@ -19,20 +19,18 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.0.2
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.12.0
     - apache-airflow-providers-common-sql >=1.32.0
-    # more restrictive for python >=3.14
+    # tightest of upstream's floors (python >=3.14)
+    # psycopg[binary] needs nothing extra on conda-forge
     - psycopg >=3.3.3
-    # start psycopg[binary]
-    # end psycopg[binary]
-    # more restrictive for python >=3.13
+    # tightest of upstream's floors (python >=3.13)
     - psycopg2-binary >=2.9.10
     - asyncpg >=0.30.0
-
 tests:
   - python:
       imports:
@@ -40,7 +38,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   homepage: https://github.com/apache/airflow/

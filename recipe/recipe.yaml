@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-postgres
-  version: 7.1.0
+  version: 7.1.1
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_postgres-${{ version }}.tar.gz
-  sha256: 775b8f0c12611c5c3c4c7b639de749589c8dd0d1e250f265f4198ee4982a4c0c
+  sha256: ebea35773fdfd97fa404632b3c35ceb846082a6d94ffdf710fcd448b41a58990
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.0.2
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
